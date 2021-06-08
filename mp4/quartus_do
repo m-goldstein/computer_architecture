@@ -1,0 +1,6 @@
+#!/bin/sh
+quartus_map $1
+if [ $2 ]
+then
+    quartus_sh -t "/software/quartus-std-18.1/quartus/common/tcl/internal/nativelink/qnativesim.tcl" --rtl_sim $1 $1
+fi
